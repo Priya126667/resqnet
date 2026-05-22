@@ -9,10 +9,11 @@ from twilio.rest import Client
 app = Flask(__name__)
 
 # ─── Twilio Config ─────────────────────────────────────────────────────────────
-TWILIO_ACCOUNT_SID = "ACc822c6f1c65b353ee5d1db8886ec4051"
-TWILIO_AUTH_TOKEN  = "0081553349cb087051057e5d1bac5116"
-TWILIO_FROM_NUMBER = "whatsapp:+14155238886"
-MY_PHONE_NUMBER    = "whatsapp:+917876678438"
+import os
+TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN  = os.environ.get("TWILIO_AUTH_TOKEN")
+TWILIO_FROM_NUMBER = os.environ.get("TWILIO_FROM_NUMBER")
+MY_PHONE_NUMBER    = os.environ.get("MY_PHONE_NUMBER")
 
 def send_sms(body: str) -> bool:
     try:
