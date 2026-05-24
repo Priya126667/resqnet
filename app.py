@@ -92,6 +92,14 @@ def shelters():
     return jsonify(SHELTERS)
 
 @app.route("/api/chat", methods=["POST"])
+return render_template("contact.html", success=False)  # line 94 - already hai
+
+# ─── ADMIN PAGE ──────────────────────────────────────────────────────────────
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
+
+def get_address_from_coords(lat, lng):  # line 95 - already hai
 def chat():
     data = request.json
     msg = data.get("message", "")
