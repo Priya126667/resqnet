@@ -479,7 +479,7 @@ tr:hover td{background:rgba(255,255,255,0.02);}
     </div>
     <button class="login-btn" onclick="doLogin()">LOGIN TO ADMIN PANEL →</button>
     <div class="login-error" id="login-error">❌ Invalid credentials. Try again.</div>
-    <p style="font-size:12px;color:var(--muted);margin-top:18px;text-align:center;">Default: admin / resqnet@2025</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:18px;text-align:center;">Default: admin / resqnet@2026</p>
   </div>
 </div>
 
@@ -865,7 +865,7 @@ let editingShelterIdx = null;
 function doLogin() {
   const u = document.getElementById('login-user').value.trim();
   const p = document.getElementById('login-pass').value;
-  if (u === 'admin' && p === 'resqnet@2025') {
+  if (u === 'admin' && p === 'resqnet@2026') {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('admin-app').style.display = 'block';
     initAdmin();
